@@ -18,6 +18,11 @@ pipeline {
                 sh "mvn clean test package"
             }
         }
+        stage('Upload war to Nexus'){
+            steps {
+                
+            }
+        }
         stage('Code Quality'){
             steps {
                 sh "mvn sonar:sonar"
