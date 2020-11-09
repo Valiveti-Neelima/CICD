@@ -10,12 +10,17 @@ pipeline {
         stage('SCM ') {
             steps {
                 git credentialsId: 'github', 
-                    url: 'https://github.com/Valiveti-Neelima/dockeransiblejenkins.git'
+                    url: 'https://github.com/CICD.git'
             }
         }
         stage('Maven Build'){
             steps {
-                sh "mvn clean package"
+                sh "mvn clean test package"
+            }
+        }
+        stage('Code Quality'){
+            steps {
+                sh "mvn sonar:sonar"
             }
         }
         stage('Docker Build'){
