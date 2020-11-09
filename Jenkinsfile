@@ -10,7 +10,7 @@ pipeline {
         stage('SCM ') {
             steps {
                 git credentialsId: 'github', 
-                    url: 'https://github.com/CICD.git'
+                    url: 'https://github.com/Valiveti-Neelima/CICD.git'
             }
         }
         stage('Maven Build'){
