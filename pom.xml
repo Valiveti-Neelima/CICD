@@ -75,6 +75,5 @@
   </configuration>
   </plugin>
   </plugins>
-  <finalName>Jenkins</finalName>
  </build>
 </project>
